@@ -4,131 +4,33 @@
     <title>Teste 2.0 Chat Pearson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
-<body>
-	<style type='text/css'>
-		
-	  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+<body><style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
 
-	  .convite {
-	    box-shadow: 0px 3px 16px -2px rgba(0,0,0,.2);
-	    max-width: 273px;
-	  }
-
-	  .convite, .convite header {
-	    border-top-right-radius: 10px;
-	    border-top-left-radius: 10px;
-	  }
-
-	  .pd {
-	    padding: 20px 25px;
-	  }
-
-	  .convite .btn {
-	    width: 100%;
-	    padding: 8px;
-	    margin: 0 10px 0 0;
-	    max-width: 104px;
-	    display: inline-block;
-	    font-weight: bold;
-	    font-size: 12px;
-	    border: 0;
-	    border-radius: 3px;
-	    cursor: pointer;
-	    color: #003057;
-	    transition: ease all .2s;
-	  }
-
-	  .bg-green {
-	    background-color: #D2DB0E;
-	  }
-
-	  .bg-green:hover {
-	    background-color: #e2ea28;
-	  }
-
-	  .bg-grey {
-	    background-color: #E2E2E2;
-	  }
-
-	  .bg-grey:hover {
-	    background-color: #e8e8e8;
-	  }
-
-	  .convite button:last-child {
-	    margin:0;
-	  }
-
-	  .convite header {
-	    background: #003057 url("https://res.cloudinary.com/dovrfqegt/image/upload/v1594670101/ilustracao_x5ydhd.png") no-repeat center;
-	    background-size: contain;
-	    text-align: center;
-	    height: 90px;
-	  }
-
-	  .convite footer {
-	    background: #F8FAFA;
-	    padding: 15px 17px;
-	    text-align: center;
-	  }
-
-	  .convite header img {
-	    max-width: 100%;
-	    width: auto;
-	    max-height: 90px;
-	  }
-
-	  .convite h2, .convite p, .convite button {
-	    font-family: 'Open Sans', sans-serif;
-	    margin-bottom: 0;
-	  }
-
-	  .convite h2 {
-	    font-weight: bold;
-	    color: #003057;
-	    font-size: 20px;
-	    margin-top: 5px;
-	  }
-
-	  .convite p {
-	    color: #A1A3A3;
-	    font-size: 14px;
-	    margin-top: 5px;
-	  }
-		
-	</style>
-
-	<!-- Start of Invitations -->
-	<div class="convite" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
-	  <header></header>
-	  <div class="pd">
-	    <h2>Precisa de ajuda?</h2>
-	    <p>Fale com um especialista online.</p>
-	  </div>
-	  <footer>
-	    <div class="botoes">
-	      <button type="button" class="btn bg-grey" id="rejectInvite">Não, obrigado.</button>
-	      <button type="button" class="btn bg-green" id="acceptInvite">Iniciar chat</button>
-	    </div>
-	  </footer>
+<!-- Start of Invitations -->
+<div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
+	<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
+		<img id="embeddedServiceAvatar"></img>
+		<span class="embeddedServiceTitleText" id="snapins_titletext">Need help?</span>
+		<button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
 	</div>
-	
-	<!-- Start of Invitations -->
-	<div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
-		<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
-			<img id="embeddedServiceAvatar"></img>
-			<span class="embeddedServiceTitleText" id="snapins_titletext">Need help?</span>
-			<button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
-		</div>
-		<div class="embeddedServiceInvitationBody">
-			<p id="snapins_bodytext">How can we help you?</p>
-		</div>
-		<div class="embeddedServiceInvitationFooter" aria-describedby="snapins_bodytext">
-			<button type="button" class="embeddedServiceActionButton" id="rejectInvite">Close</button>
-			<button type="button" class="embeddedServiceActionButton" id="acceptInvite">Start Chat</button>
-		</div>
+	<div class="embeddedServiceInvitationBody">
+		<p id="snapins_bodytext">How can we help you?</p>
 	</div>
-	
-	<style type='text/css'>
+	<div class="embeddedServiceInvitationFooter" aria-describedby="snapins_bodytext">
+		<button type="button" class="embeddedServiceActionButton" id="rejectInvite">Close</button>
+		<button type="button" class="embeddedServiceActionButton" id="acceptInvite">Start Chat</button>
+	</div>
+</div>
+
+<style type='text/css'>
 	#snapins_invite { background-color: #FFFFFF; font-family: "Arial", sans-serif; overflow: visible; border-radius: 8px; visibility: hidden; }
 	.embeddedServiceInvitation { background-color: transparent; max-width: 290px; max-height: 210px; -webkit-box-shadow: 0 7px 12px rgba(0,0,0,0.28); -moz-box-shadow: 0 7px 12px rgba(0,0,0,0.28); box-shadow: 0 7px 12px rgba(0,0,0,0.28); }
 	@media only screen and (min-width: 48em) { /*mobile*/ .embeddedServiceInvitation { max-width: 332px; max-height: 210px; } }
@@ -145,7 +47,7 @@
 	.embeddedServiceInvitationFooter > .embeddedServiceActionButton { font-size: 14px; max-height: 40px; border: none; border-radius: 4px; padding: 10px; margin: 4px; text-align: center; text-decoration: none; display: inline-block; cursor: pointer; }
 	.embeddedServiceInvitationFooter > #acceptInvite { background-color: #005290; color: #FFFFFF; }
 	.embeddedServiceInvitationFooter > #rejectInvite { background-color: #FFFFFF; color: #005290; }
-	</style>
+</style>
 
 <script type='text/javascript'>
 	(function() {
