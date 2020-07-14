@@ -108,15 +108,18 @@
             outline: 1px solid #003057;
         }
     </style>
-    <div class="embeddedServiceInvitation convite" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
+    <div class="convite">
+        <header></header>
         <div class="pd">
             <h2>Precisa de ajuda?</h2>
             <p>Fale com um especialista online.</p>
         </div>
-        <div class="embeddedServiceInvitationFooter botoes">
-            <button type="button" class="embeddedServiceActionButton btn bg-grey" id="rejectInvite">Não, obrigado.</button>
-            <button type="button" class="embeddedServiceActionButton btn bg-green" id="acceptInvite">Iniciar chat</button>
-        </div>
+        <footer>
+            <div class="botoes">
+                <button type="button" class="btn bg-grey" id="rejectInvite">Não, obrigado.</button>
+                <button type="button" class="btn bg-green" id="acceptInvite">Iniciar chat</button>
+            </div>
+        </footer>
     </div>
 
     <style type='text/css'>
@@ -331,4 +334,5 @@
         }
     </script>
 </body>
+
 </html>
