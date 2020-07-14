@@ -98,25 +98,38 @@
             font-size: 14px;
             margin-top: 5px;
         }
+
+        .embeddedServiceHelpButton .helpButton .uiButton {
+            background-color: #003057;
+            font-family: "Arial", sans-serif;
+        }
+
+        .embeddedServiceHelpButton .helpButton .uiButton:focus {
+            outline: 1px solid #003057;
+        }
     </style>
-    <div class="convite">
-        <header></header>
-        <div class="pd">
-            <h2>Precisa de ajuda?</h2>
-            <p>Fale com um especialista online.</p>
-        </div>
-        <footer>
-            <div class="botoes">
-                <button type="button" class="btn bg-grey" id="rejectInvite">Não, obrigado.</button>
-                <button type="button" class="btn bg-green" id="acceptInvite">Iniciar chat</button>
+    <!-- Start of Invitations -->
+    <div class="embeddedServiceInvitation">
+        <div class="convite">
+            <header></header>
+            <div class="pd">
+                <h2>Precisa de ajuda?</h2>
+                <p>Fale com um especialista online.</p>
             </div>
-        </footer>
+            <footer>
+                <div class="botoes">
+                    <button type="button" class="btn bg-grey" id="rejectInvite">Não, obrigado.</button>
+                    <button type="button" class="btn bg-green" id="acceptInvite">Iniciar chat</button>
+                </div>
+            </footer>
+        </div>
     </div>
 
     <script type='text/javascript'>
         (function () {
-            document.getElementById('rejectInvite').onclick = function () { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };
-            document.getElementById('acceptInvite').onclick = function () { embedded_svc.inviteAPI.inviteButton.acceptInvite(); };
+            document.getElementById('closeInvite').onclick = function () { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };
+            document.getElementById('rejectInvite').onclick = function () { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }; // use this API call to reject invitations
+            document.getElementById('acceptInvite').onclick = function () { embedded_svc.inviteAPI.inviteButton.acceptInvite(); }; // use this API call to start chat from invitations
             document.addEventListener('keyup', function (event) { if (event.keyCode == 27) { embedded_svc.inviteAPI.inviteButton.rejectInvite(); } })
         })();
     </script>
