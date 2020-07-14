@@ -8,12 +8,12 @@
 
 <body>
     <style type='text/css'>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
         #snapins_invite {
             overflow: visible;
             visibility: hidden;
         }
-
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
         .convite {
             box-shadow: 0px 3px 16px -2px rgba(0, 0, 0, .2);
@@ -118,7 +118,7 @@
             outline: 1px solid #003057;
         }
     </style>
-    <!-- Start of Invitations -->
+
     <div id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
         <div class="convite">
             <header></header>
@@ -134,30 +134,16 @@
             </footer>
         </div>
     </div>
-    <!-- End of Invitations -->
 
     <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
     <script type='text/javascript'>
         var initESW = function (gslbBaseURL) {
-            embedded_svc.settings.displayHelpButton = true; //Ou falso
-            embedded_svc.settings.language = 'pt-BR'; //Por exemplo, insira "pt" ou "pt-BR"
-
-            embedded_svc.settings.defaultMinimizedText = 'Chat online'; //(Assume como padrão o Chat com um especialista)
-            embedded_svc.settings.disabledMinimizedText = 'Agente offline'; //(Assume como padrão Agente off-line)
-
-            embedded_svc.settings.loadingText = 'Carregando'; //(Assume como padrão Carregando)
-            //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Define o domínio de sua implantação para que seus visitantes possam navegar em subdomínios durante uma sessão de chat)
-
-            // Configurações para Chat
-            //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-            // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-            // Returns a valid button ID.
-            //};
-            //embedded_svc.settings.prepopulatedPrechatFields = {}; //Define o preenchimento automático de campos de formulário de pré-chat
-            //embedded_svc.settings.fallbackRouting = []; //Uma matriz de IDs de botão, IDs de usuário ou userId_buttonId
-
-            embedded_svc.settings.offlineSupportMinimizedText = 'Fale conosco'; //(Padronizado para Entre em contato conosco)
-
+            embedded_svc.settings.displayHelpButton = true;
+            embedded_svc.settings.language = 'pt-BR';
+            embedded_svc.settings.defaultMinimizedText = 'Chat online';
+            embedded_svc.settings.disabledMinimizedText = 'Agente offline';
+            embedded_svc.settings.loadingText = 'Carregando';
+            embedded_svc.settings.offlineSupportMinimizedText = 'Fale conosco';
             embedded_svc.settings.enabledFeatures = ['LiveAgent'];
             embedded_svc.settings.entryFeature = 'LiveAgent';
 
