@@ -127,21 +127,12 @@
             </div>
             <footer>
                 <div class="botoes">
-                    <button type="button" class="btn bg-grey" id="rejectInvite">Não, obrigado.</button>
-                    <button type="button" class="btn bg-green" id="acceptInvite">Iniciar chat</button>
+                    <button type="button" class="btn bg-grey" onclick="function () { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };">Não, obrigado.</button>
+                    <button type="button" class="btn bg-green" onclick="function () { embedded_svc.inviteAPI.inviteButton.acceptInvite(); };">Iniciar chat</button>
                 </div>
             </footer>
         </div>
     </div>
-
-    <script type='text/javascript'>
-        (function () {
-            document.getElementById('closeInvite').onclick = function () { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };
-            document.getElementById('rejectInvite').onclick = function () { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }; // use this API call to reject invitations
-            document.getElementById('acceptInvite').onclick = function () { embedded_svc.inviteAPI.inviteButton.acceptInvite(); }; // use this API call to start chat from invitations
-            document.addEventListener('keyup', function (event) { if (event.keyCode == 27) { embedded_svc.inviteAPI.inviteButton.rejectInvite(); } })
-        })();
-    </script>
     <!-- End of Invitations -->
 
     <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
