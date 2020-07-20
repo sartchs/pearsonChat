@@ -110,6 +110,18 @@
             font-size: 14px;
             margin-top: 5px;
         }
+     
+        .fechar button{
+           color: white;
+           float:right;
+           padding:10px;
+           background-color: transparent;
+           border:0;
+           outline: none;
+           cursor: pointer;
+           font-family: "Open Sans", sans-serif;
+           font-size:15px;
+         }
 
         .embeddedServiceHelpButton .helpButton .uiButton {
             background-color: #003057;
@@ -123,7 +135,11 @@
 
     <div id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
         <div class="convite">
-            <header></header>
+            <header>
+                <div class="fechar">
+                  <button onclick="embedded_svc.inviteAPI.inviteButton.rejectInvite();">x</button>
+                </div>
+            </header>
             <div class="pd">
                 <h2>Precisa de ajuda?</h2>
                 <p>Fale com um especialista online.</p>
